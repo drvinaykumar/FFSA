@@ -141,47 +141,161 @@
         }
 
         .resources {
-            background: linear-gradient(135deg, rgba(241, 248, 233, 0.9) 0%, rgba(232, 245, 212, 0.8) 100%);
-            border-left-color: #82b366;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-left: none;
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            margin-top: 3rem;
+        }
+
+        .resources::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+
+        .resources h2 {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            border: none;
+            padding-bottom: 0;
+        }
+
+        .resources h2::before {
+            content: "🎯";
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 0.5rem;
         }
 
         .resources ul {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+            padding: 0 1rem 1rem 1rem;
         }
 
         .resources li {
-            background: linear-gradient(135deg, #ffffff 0%, #f7fcf3 100%);
-            padding: 1rem 1.5rem;
-            border-radius: 6px;
-            box-shadow: 0 2px 12px rgba(130, 179, 102, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem 2rem 2rem 2rem;
+            border-radius: 20px;
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
             margin-bottom: 0;
-            flex: 1;
-            min-width: 200px;
-            border: 1px solid #c8e6c9;
-            transition: all 0.3s ease;
+            border: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .resources li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(102, 126, 234, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
 
         .resources li:hover {
-            background: linear-gradient(135deg, #f7fcf3 0%, #f1f8e9 100%);
-            box-shadow: 0 4px 20px rgba(130, 179, 102, 0.15);
-            transform: translateY(-1px);
+            transform: translateY(-8px) rotateX(2deg);
+            box-shadow: 
+                0 20px 50px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        }
+
+        .resources li:hover::after {
+            opacity: 1;
+        }
+
+        .resources li a {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            display: block;
+            text-decoration: none;
+            border: none;
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            padding-top: 1rem;
+        }
+
+        .resources li a:hover {
+            color: #667eea;
+            border: none;
+        }
+
+        .resources li:nth-child(1) {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 248, 225, 0.95) 100%);
+        }
+
+        .resources li:nth-child(2) {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 248, 255, 0.95) 100%);
+        }
+
+        .resources li:nth-child(3) {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 240, 255, 0.95) 100%);
         }
 
         .resources li:nth-child(1)::before {
             content: "📋";
-            font-size: 1.2em;
+            font-size: 2.5rem;
+            position: absolute;
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
         }
 
         .resources li:nth-child(2)::before {
-            content: "📖";
-            font-size: 1.2em;
+            content: "📚";
+            font-size: 2.5rem;
+            position: absolute;
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
         }
 
         .resources li:nth-child(3)::before {
-            content: "🎬";
-            font-size: 1.2em;
+            content: "🎥";
+            font-size: 2.5rem;
+            position: absolute;
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+
+        .resource-description {
+            font-size: 0.9rem;
+            color: #6c757d;
+            text-align: center;
+            margin-top: 0.5rem;
+            font-style: italic;
         }
 
         @media (max-width: 768px) {
@@ -226,7 +340,8 @@
     <div class="container">
         <header class="fade-in">
             <h1>Freedom, Foolishness, Stupidity, and Arrogance</h1>
-            <p class="subtitle">A 25-lecture course exploring the philosophical, psychological, sociological, and historical dimensions of four interconnected human conditions.</p>
+            <p class="subtitle">A 25-lecture course exploring the philosophical, psychological, sociological, and historical dimensions of four interconnected human conditions offered at <a href="https://tslas.thapar.edu" target="_blank" rel="noopener">Thapar School of Liberal Arts &amp; Sciences</a>.</p>
+
         </header>
 
         <div class="section fade-in">
@@ -234,57 +349,57 @@
             <p>The course is divided into five thematic modules, each containing five lectures:</p>
 
             <div class="module">
-                <h3><a href="https://example.com/FFSA/modules/module1.html">Module 1: Foundations and Definitions</a></h3>
+                <h3><a href="https://drvinaykumar.github.io/FFSA/modules/module1.html">Module 1: Foundations and Definitions</a></h3>
                 <ul>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_01.html">Lecture 1: Introduction to the Course: Conceptual Framework</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_02.html">Lecture 2: Freedom: Philosophical Foundations and Definitions</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_03.html">Lecture 3: Foolishness: Cultural and Psychological Perspectives</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_04.html">Lecture 4: Stupidity: Cognitive Science and Epistemological Approaches</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_05.html">Lecture 5: Arrogance: Social Psychology and Ethical Dimensions</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_01.html">Lecture 1: Introduction to the Course: Conceptual Framework</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_02.html">Lecture 2: Freedom: Philosophical Foundations and Definitions</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_03.html">Lecture 3: Foolishness: Cultural and Psychological Perspectives</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_04.html">Lecture 4: Stupidity: Cognitive Science and Epistemological Approaches</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_05.html">Lecture 5: Arrogance: Social Psychology and Ethical Dimensions</a></li>
                 </ul>
             </div>
 
             <div class="module">
-                <h3><a href="https://example.com/FFSA/modules/module2.html">Module 2: Historical Perspectives</a></h3>
+                <h3><a href="https://drvinaykumar.github.io/FFSA/modules/module2.html">Module 2: Historical Perspectives</a></h3>
                 <ul>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_06.html">Lecture 6: Freedom and Oppression Throughout History</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_07.html">Lecture 7: Historical Manifestations of Collective Foolishness</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_08.html">Lecture 8: Stupidity: Cognitive Science and Epistemological Approaches</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_09.html">Lecture 9: Arrogance of Power: Case Studies from World History</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_10.html">Lecture 10: Intersections: How These Forces Shaped Major Historical Events</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_06.html">Lecture 6: Freedom and Oppression Throughout History</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_07.html">Lecture 7: Historical Manifestations of Collective Foolishness</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_08.html">Lecture 8: Stupidity: Cognitive Science and Epistemological Approaches</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_09.html">Lecture 9: Arrogance of Power: Case Studies from World History</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_10.html">Lecture 10: Intersections: How These Forces Shaped Major Historical Events</a></li>
                 </ul>
             </div>
 
             <div class="module">
-                <h3><a href="https://example.com/FFSA/modules/module3.html">Module 3: Contemporary Social Analysis</a></h3>
+                <h3><a href="https://drvinaykumar.github.io/FFSA/modules/module3.html">Module 3: Contemporary Social Analysis</a></h3>
                 <ul>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_11.html">Lecture 11: Freedom in Modern Democratic Societies</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_12.html">Lecture 12: Contemporary Manifestations of Foolishness in Media and Politics</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_13.html">Lecture 13: Systemic Stupidity in Organizations and Institutions</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_14.html">Lecture 14: Arrogance in Leadership and Its Consequences</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_15.html">Lecture 15: Digital Age Implications: Social Media, Information Bubbles, and Cognitive Biases</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_11.html">Lecture 11: Freedom in Modern Democratic Societies</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_12.html">Lecture 12: Contemporary Manifestations of Foolishness in Media and Politics</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_13.html">Lecture 13: Systemic Stupidity in Organizations and Institutions</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_14.html">Lecture 14: Arrogance in Leadership and Its Consequences</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_15.html">Lecture 15: Digital Age Implications: Social Media, Information Bubbles, and Cognitive Biases</a></li>
                 </ul>
             </div>
 
             <div class="module">
-                <h3><a href="https://example.com/FFSA/modules/module4.html">Module 4: Individual and Psychological Dimensions</a></h3>
+                <h3><a href="https://drvinaykumar.github.io/FFSA/modules/module4.html">Module 4: Individual and Psychological Dimensions</a></h3>
                 <ul>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_16.html">Lecture 16: Personal Freedom and Psychological Well-being</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_17.html">Lecture 17: The Psychology of Foolish Decision-Making</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_18.html">Lecture 18: Cognitive Biases and Individual Stupidity</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_19.html">Lecture 19: Narcissism, Hubris, and Arrogance in Individual Behavior</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_20.html">Lecture 20: Self-Awareness as Antidote: Mindfulness and Critical Thinking</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_16.html">Lecture 16: Personal Freedom and Psychological Well-being</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_17.html">Lecture 17: The Psychology of Foolish Decision-Making</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_18.html">Lecture 18: Cognitive Biases and Individual Stupidity</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_19.html">Lecture 19: Narcissism, Hubris, and Arrogance in Individual Behavior</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_20.html">Lecture 20: Self-Awareness as Antidote: Mindfulness and Critical Thinking</a></li>
                 </ul>
             </div>
 
             <div class="module">
-                <h3><a href="https://example.com/FFSA/modules/module5.html">Module 5: Philosophical and Ethical Implications</a></h3>
+                <h3><a href="https://drvinaykumar.github.io/FFSA/modules/module5.html">Module 5: Philosophical and Ethical Implications</a></h3>
                 <ul>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_21.html">Lecture 21: Freedom and Responsibility: Ethical Frameworks</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_22.html">Lecture 22: The Wisdom in Foolishness: Paradoxes and Insights</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_23.html">Lecture 23: Epistemic Humility vs. Intellectual Arrogance</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_24.html">Lecture 24: Collective Intelligence and Overcoming Societal Stupidity</a></li>
-                    <li><a href="https://example.com/FFSA/lectures/lecture_25.html">Lecture 25: Synthesis and Future Directions: Balancing Freedom with Wisdom</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_21.html">Lecture 21: Freedom and Responsibility: Ethical Frameworks</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_22.html">Lecture 22: The Wisdom in Foolishness: Paradoxes and Insights</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_23.html">Lecture 23: Epistemic Humility vs. Intellectual Arrogance</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_24.html">Lecture 24: Collective Intelligence and Overcoming Societal Stupidity</a></li>
+                    <li><a href="https://drvinaykumar.github.io/FFSA/lectures/lecture_25.html">Lecture 25: Synthesis and Future Directions: Balancing Freedom with Wisdom</a></li>
                 </ul>
             </div>
         </div>
@@ -292,9 +407,18 @@
         <div class="section resources fade-in">
             <h2>Resources</h2>
             <ul>
-                <li><a href="https://example.com/FFSA/lectures/course_outline.html">Course Outline</a></li>
-                <li><a href="https://example.com/FFSA/lectures/comprehensive_reading_list.html">Comprehensive Reading List</a></li>
-                <li><a href="https://example.com/FFSA/lectures/supplementary_av_materials.html">Supplementary AV Materials</a></li>
+                <li>
+                    <a href="https://drvinaykumar.github.io/FFSA/lectures/course_outline.html">Course Outline</a>
+                    <div class="resource-description">Detailed syllabus and schedule</div>
+                </li>
+                <li>
+                    <a href="https://drvinaykumar.github.io/FFSA/lectures/comprehensive_reading_list.html">Reading List</a>
+                    <div class="resource-description">Essential texts and materials</div>
+                </li>
+                <li>
+                    <a href="https://drvinaykumar.github.io/FFSA/lectures/supplementary_av_materials.html">Media Library</a>
+                    <div class="resource-description">Videos, podcasts, and documentaries</div>
+                </li>
             </ul>
         </div>
     </div>
