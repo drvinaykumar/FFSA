@@ -1,59 +1,312 @@
-<h1 id="course-freedom-foolishness-stupidity-and-arrogance">Course: Freedom, Foolishness, Stupidity, and Arrogance</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freedom, Foolishness, Stupidity, and Arrogance</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<p>Welcome to the course website for “Freedom, Foolishness, Stupidity, and Arrogance”. This 25-lecture course explores the philosophical, psychological, sociological, and historical dimensions of four interconnected human conditions.</p>
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f7f9fc 0%, #e8f4f8 100%);
+            min-height: 100vh;
+        }
 
-<h2 id="course-structure">Course Structure</h2>
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-<p>The course is divided into five thematic modules, each containing five lectures:</p>
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(247, 250, 252, 0.9) 100%);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.1);
+            border-top: 3px solid #3498db;
+        }
 
-<h3 id="module-1-foundations-and-definitions"><a href="/FFSA/modules/module1.html">Module 1: Foundations and Definitions</a></h3>
-<ul>
-  <li><a href="/FFSA/lectures/lecture_01.html">Lecture 1: Introduction to the Course: Conceptual Framework</a></li>
-  <li><a href="/FFSA/lectures/lecture_02.html">Lecture 2: Freedom: Philosophical Foundations and Definitions</a></li>
-  <li><a href="/FFSA/lectures/lecture_03.html">Lecture 3: Foolishness: Cultural and Psychological Perspectives</a></li>
-  <li><a href="/FFSA/lectures/lecture_04.html">Lecture 4: Stupidity: Cognitive Science and Epistemological Approaches</a></li>
-  <li><a href="/FFSA/lectures/lecture_05.html">Lecture 5: Arrogance: Social Psychology and Ethical Dimensions</a></li>
-</ul>
+        h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 400;
+            letter-spacing: -0.5px;
+            text-shadow: 0 1px 2px rgba(52, 152, 219, 0.1);
+        }
 
-<h3 id="module-2-historical-perspectives"><a href="/FFSA/modules/module2.html">Module 2: Historical Perspectives</a></h3>
-<ul>
-  <li><a href="/FFSA/lectures/lecture_06.html">Lecture 6: Freedom and Oppression Throughout History</a></li>
-  <li><a href="/FFSA/lectures/lecture_07.html">Lecture 7: Historical Manifestations of Collective Foolishness</a></li>
-  <li><a href="/FFSA/lectures/lecture_08.html">Lecture 8: Stupidity: Cognitive Science and Epistemological Approaches</a></li>
-  <li><a href="/FFSA/lectures/lecture_09.html">Lecture 9: Arrogance of Power: Case Studies from World History</a></li>
-  <li><a href="/FFSA/lectures/lecture_10.html">Lecture 10: Intersections: How These Forces Shaped Major Historical Events</a></li>
-</ul>
+        .subtitle {
+            font-size: 1.1rem;
+            color: #5d6d7e;
+            max-width: 600px;
+            margin: 0 auto;
+            font-style: italic;
+        }
 
-<h3 id="module-3-contemporary-social-analysis"><a href="/FFSA/modules/module3.html">Module 3: Contemporary Social Analysis</a></h3>
-<ul>
-  <li><a href="/FFSA/lectures/lecture_11.html">Lecture 11: Freedom in Modern Democratic Societies</a></li>
-  <li><a href="/FFSA/lectures/lecture_12.html">Lecture 12: Contemporary Manifestations of Foolishness in Media and Politics</a></li>
-  <li><a href="/FFSA/lectures/lecture_13.html">Lecture 13: Systemic Stupidity in Organizations and Institutions</a></li>
-  <li><a href="/FFSA/lectures/lecture_14.html">Lecture 14: Arrogance in Leadership and Its Consequences</a></li>
-  <li><a href="/FFSA/lectures/lecture_15.html">Lecture 15: Digital Age Implications: Social Media, Information Bubbles, and Cognitive Biases</a></li>
-</ul>
+        .section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 251, 253, 0.9) 100%);
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(52, 152, 219, 0.08);
+            border-left: 4px solid #85c1e9;
+            transition: all 0.3s ease;
+        }
 
-<h3 id="module-4-individual-and-psychological-dimensions"><a href="/FFSA/modules/module4.html">Module 4: Individual and Psychological Dimensions</a></h3>
-<ul>
-  <li><a href="/FFSA/lectures/lecture_16.html">Lecture 16: Personal Freedom and Psychological Well-being</a></li>
-  <li><a href="/FFSA/lectures/lecture_17.html">Lecture 17: The Psychology of Foolish Decision-Making</a></li>
-  <li><a href="/FFSA/lectures/lecture_18.html">Lecture 18: Cognitive Biases and Individual Stupidity</a></li>
-  <li><a href="/FFSA/lectures/lecture_19.html">Lecture 19: Narcissism, Hubris, and Arrogance in Individual Behavior</a></li>
-  <li><a href="/FFSA/lectures/lecture_20.html">Lecture 20: Self-Awareness as Antidote: Mindfulness and Critical Thinking</a></li>
-</ul>
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 25px rgba(52, 152, 219, 0.15);
+            border-left-color: #3498db;
+        }
 
-<h3 id="module-5-philosophical-and-ethical-implications"><a href="/FFSA/modules/module5.html">Module 5: Philosophical and Ethical Implications</a></h3>
-<ul>
-  <li><a href="/FFSA/lectures/lecture_21.html">Lecture 21: Freedom and Responsibility: Ethical Frameworks</a></li>
-  <li><a href="/FFSA/lectures/lecture_22.html">Lecture 22: The Wisdom in Foolishness: Paradoxes and Insights</a></li>
-  <li><a href="/FFSA/lectures/lecture_23.html">Lecture 23: Epistemic Humility vs. Intellectual Arrogance</a></li>
-  <li><a href="/FFSA/lectures/lecture_24.html">Lecture 24: Collective Intelligence and Overcoming Societal Stupidity</a></li>
-  <li><a href="/FFSA/lectures/lecture_25.html">Lecture 25: Synthesis and Future Directions: Balancing Freedom with Wisdom</a></li>
-</ul>
+        h2 {
+            color: #34495e;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            border-bottom: 2px solid #d5dbdb;
+            padding-bottom: 0.5rem;
+        }
 
-<h2 id="resources">Resources</h2>
-<ul>
-  <li><a href="/FFSA/lectures/course_outline.html">Course Outline</a></li>
-  <li><a href="/FFSA/lectures/comprehensive_reading_list.html">Comprehensive Reading List</a></li>
-  <li><a href="/FFSA/lectures/supplementary_av_materials.html">Supplementary AV Materials</a></li>
-</ul>
+        h3 {
+            color: #5d6d7e;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem 0;
+            font-weight: 400;
+        }
+
+        h3 a {
+            color: #5d6d7e;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        h3 a:hover {
+            color: #3498db;
+        }
+
+        .module {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8fbfc 0%, #ecf7fa 100%);
+            border-radius: 8px;
+            border: 1px solid #d5e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .module:hover {
+            background: linear-gradient(135deg, #f0f8fb 0%, #e1f2f7 100%);
+            border-color: #a9d3e8;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #7fb3d3;
+            font-weight: bold;
+        }
+
+        a {
+            color: #5d6d7e;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            color: #2980b9;
+            border-bottom-color: #85c1e9;
+        }
+
+        .resources {
+            background: linear-gradient(135deg, rgba(241, 248, 233, 0.9) 0%, rgba(232, 245, 212, 0.8) 100%);
+            border-left-color: #82b366;
+        }
+
+        .resources ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .resources li {
+            background: linear-gradient(135deg, #ffffff 0%, #f7fcf3 100%);
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 12px rgba(130, 179, 102, 0.1);
+            margin-bottom: 0;
+            flex: 1;
+            min-width: 200px;
+            border: 1px solid #c8e6c9;
+            transition: all 0.3s ease;
+        }
+
+        .resources li:hover {
+            background: linear-gradient(135deg, #f7fcf3 0%, #f1f8e9 100%);
+            box-shadow: 0 4px 20px rgba(130, 179, 102, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .resources li:nth-child(1)::before {
+            content: "📋";
+            font-size: 1.2em;
+        }
+
+        .resources li:nth-child(2)::before {
+            content: "📖";
+            font-size: 1.2em;
+        }
+
+        .resources li:nth-child(3)::before {
+            content: "🎬";
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .resources ul {
+                flex-direction: column;
+            }
+
+            .resources li {
+                min-width: auto;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="fade-in">
+            <h1>Freedom, Foolishness, Stupidity, and Arrogance</h1>
+            <p class="subtitle">A 25-lecture course exploring the philosophical, psychological, sociological, and historical dimensions of four interconnected human conditions.</p>
+        </header>
+
+        <div class="section fade-in">
+            <h2>Course Structure</h2>
+            <p>The course is divided into five thematic modules, each containing five lectures:</p>
+
+            <div class="module">
+                <h3><a href="https://example.com/FFSA/modules/module1.html">Module 1: Foundations and Definitions</a></h3>
+                <ul>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_01.html">Lecture 1: Introduction to the Course: Conceptual Framework</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_02.html">Lecture 2: Freedom: Philosophical Foundations and Definitions</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_03.html">Lecture 3: Foolishness: Cultural and Psychological Perspectives</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_04.html">Lecture 4: Stupidity: Cognitive Science and Epistemological Approaches</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_05.html">Lecture 5: Arrogance: Social Psychology and Ethical Dimensions</a></li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3><a href="https://example.com/FFSA/modules/module2.html">Module 2: Historical Perspectives</a></h3>
+                <ul>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_06.html">Lecture 6: Freedom and Oppression Throughout History</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_07.html">Lecture 7: Historical Manifestations of Collective Foolishness</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_08.html">Lecture 8: Stupidity: Cognitive Science and Epistemological Approaches</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_09.html">Lecture 9: Arrogance of Power: Case Studies from World History</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_10.html">Lecture 10: Intersections: How These Forces Shaped Major Historical Events</a></li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3><a href="https://example.com/FFSA/modules/module3.html">Module 3: Contemporary Social Analysis</a></h3>
+                <ul>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_11.html">Lecture 11: Freedom in Modern Democratic Societies</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_12.html">Lecture 12: Contemporary Manifestations of Foolishness in Media and Politics</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_13.html">Lecture 13: Systemic Stupidity in Organizations and Institutions</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_14.html">Lecture 14: Arrogance in Leadership and Its Consequences</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_15.html">Lecture 15: Digital Age Implications: Social Media, Information Bubbles, and Cognitive Biases</a></li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3><a href="https://example.com/FFSA/modules/module4.html">Module 4: Individual and Psychological Dimensions</a></h3>
+                <ul>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_16.html">Lecture 16: Personal Freedom and Psychological Well-being</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_17.html">Lecture 17: The Psychology of Foolish Decision-Making</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_18.html">Lecture 18: Cognitive Biases and Individual Stupidity</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_19.html">Lecture 19: Narcissism, Hubris, and Arrogance in Individual Behavior</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_20.html">Lecture 20: Self-Awareness as Antidote: Mindfulness and Critical Thinking</a></li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h3><a href="https://example.com/FFSA/modules/module5.html">Module 5: Philosophical and Ethical Implications</a></h3>
+                <ul>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_21.html">Lecture 21: Freedom and Responsibility: Ethical Frameworks</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_22.html">Lecture 22: The Wisdom in Foolishness: Paradoxes and Insights</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_23.html">Lecture 23: Epistemic Humility vs. Intellectual Arrogance</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_24.html">Lecture 24: Collective Intelligence and Overcoming Societal Stupidity</a></li>
+                    <li><a href="https://example.com/FFSA/lectures/lecture_25.html">Lecture 25: Synthesis and Future Directions: Balancing Freedom with Wisdom</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section resources fade-in">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="https://example.com/FFSA/lectures/course_outline.html">Course Outline</a></li>
+                <li><a href="https://example.com/FFSA/lectures/comprehensive_reading_list.html">Comprehensive Reading List</a></li>
+                <li><a href="https://example.com/FFSA/lectures/supplementary_av_materials.html">Supplementary AV Materials</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Add staggered fade-in animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+    </script>
+</body>
+</html>
