@@ -10,8 +10,12 @@
 
 @import "{{ site.theme }}";
 
-/* Hide Cayman’s GitHub button and footer credits */
-.page-header .btn { display: none !important; }
+/* hide the header button(s) */
+.page-header a.btn,
+.page-header .btn,
+a.btn[href*="github.com"] { display: none !important; }
+
+/* (already working) footer credits */
 .site-footer-owner,
 .site-footer-credits { display: none !important; }
 
