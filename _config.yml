@@ -28,7 +28,7 @@ url: "" # will be updated with GitHub Pages URL
 github_username: github-username
 
 # Build settings
-theme: Just the Docs
+theme: minima
 plugins:
   - jekyll-feed
 
@@ -53,7 +53,7 @@ plugins:
 #   - vendor/ruby/
 
 # GitHub Pages Configuration
-remote_theme: pages-themes/cayman@v0.2.0
+remote_theme: just-the-docs/just-the-docs
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
