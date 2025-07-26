@@ -8,17 +8,21 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+@import "{{ site.theme }}";   /* loads Cayman */
 
-/* hide the header button(s) */
+/* Put your overrides AFTER the import so they win in the cascade */
 .page-header a.btn,
 .page-header .btn,
-a.btn[href*="github.com"] { display: none !important; }
+header.page-header a.btn,
+header[role="banner"] a.btn,
+.page-header .project-tagline + a.btn,
+a.btn[href*="github.com"] {
+  display: none !important;
+}
 
-/* (already working) footer credits */
+/* footer (already working) */
 .site-footer-owner,
 .site-footer-credits { display: none !important; }
-
 
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
