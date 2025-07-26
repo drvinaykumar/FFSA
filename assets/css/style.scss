@@ -3,6 +3,14 @@
 
 @import "{{ site.theme }}";
 
-.page-header .btn {
+/* Hide the View on GitHub button */
+.page-header .btn,
+.page-header a[href*="github.com"],
+header .btn {
     display: none !important;
+}
+
+/* Restore any footer content if needed */
+.site-footer {
+    display: block !important;
 }
