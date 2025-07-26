@@ -53,7 +53,7 @@ plugins:
 #   - vendor/ruby/
 
 # GitHub Pages Configuration
-remote_theme: pages-themes/modernist
+remote_theme: pages-themes/cayman
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
