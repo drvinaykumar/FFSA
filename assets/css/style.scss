@@ -3,7 +3,19 @@
 
 @import "{{ site.theme }}";
 
-/* Hide any GitHub button in page header */
+/* Hide the original button text and replace */
 .page-header a.btn[href*="github.com"] {
-    display: none !important;
+    color: transparent !important;
+    position: relative;
+}
+
+.page-header a.btn[href*="github.com"]:before {
+    content: "Go to Home Page";
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
 }
