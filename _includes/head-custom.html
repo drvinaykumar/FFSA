@@ -1,0 +1,54 @@
+<!-- Inject a Back bar on all lecture pages -->
+<style>
+  .lecture-backbar{
+    display:flex;gap:12px;align-items:center;flex-wrap:wrap;
+    padding:12px 16px;margin:0 0 20px 0;
+    border:1px solid #e2e8f0;border-radius:12px;background:#f8fafc;
+  }
+  .lecture-backbtn{
+    display:inline-block;padding:10px 14px;border-radius:10px;
+    border:1px solid #e2e8f0;text-decoration:none;font-weight:600;color:#111827;
+    transition:transform .08s ease, box-shadow .2s ease, border-color .2s ease;
+    background:#ffffff;
+  }
+  .lecture-backbtn:hover{
+    transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.06);
+    border-color:#c7d2fe;
+  }
+  /* optional floating button */
+  .lecture-fab{
+    position:fixed;right:24px;bottom:24px;z-index:9999;
+    padding:12px 16px;border-radius:999px;font-weight:600;
+    border:1px solid #e2e8f0;background:#ffffff;color:#111827;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+  }
+  .lecture-fab:hover{ border-color:#c7d2fe; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Only on lecture pages: /FFSA/lectures/...
+  var isLecture = location.pathname.indexOf('/FFSA/lectures/') !== -1;
+  if (!isLecture) return;
+
+  var main = document.querySelector('.main-content') || document.body;
+
+  // Top bar
+  var bar = document.createElement('div');
+  bar.className = 'lecture-backbar';
+  bar.innerHTML =
+    '<a class="lecture-backbtn" href="https://drvinaykumar.github.io/FFSA/">← Back to Course Home</a>' +
+    '<button class="lecture-backbtn" type="button" onclick="history.back()">⟵ Go Back</button>';
+  main.insertBefore(bar, main.firstChild);
+
+  // Optional floating button (uncomment to enable)
+  /*
+  var fab = document.createElement('button');
+  fab.className = 'lecture-fab';
+  fab.type = 'button';
+  fab.textContent = '⟵ Back';
+  fab.addEventListener('click', function(){ history.back(); });
+  document.body.appendChild(fab);
+  */
+});
+</script>
