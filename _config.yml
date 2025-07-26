@@ -53,7 +53,7 @@ plugins:
 #   - vendor/ruby/
 
 # GitHub Pages Configuration
-remote_theme: alshedivat/al-folio
+remote_theme: daviddarnes/alembic
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
