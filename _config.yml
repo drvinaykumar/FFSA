@@ -28,7 +28,7 @@ url: "" # will be updated with GitHub Pages URL
 github_username: github-username
 
 # Build settings
-theme: minima
+theme: Just the Docs
 plugins:
   - jekyll-feed
 
