@@ -53,7 +53,7 @@ plugins:
 #   - vendor/ruby/
 
 # GitHub Pages Configuration
-remote_theme: poole/lanyon
+remote_theme: minima
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
