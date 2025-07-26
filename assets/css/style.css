@@ -4,6 +4,19 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Hide Cayman’s GitHub button and footer credits */
+.page-header .btn { display: none !important; }
+.site-footer-owner,
+.site-footer-credits { display: none !important; }
+
+
+
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
 html {
   font-family: sans-serif; /* 1 */
