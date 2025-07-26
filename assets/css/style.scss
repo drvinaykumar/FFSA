@@ -3,7 +3,7 @@
 
 @import "{{ site.theme }}";
 
-/* Hide all buttons in header */
-.page-header a {
+/* Hide the specific GitHub button */
+.page-header a.btn[href*="github.com/drvinaykumar/FFSA"] {
     display: none !important;
 }
